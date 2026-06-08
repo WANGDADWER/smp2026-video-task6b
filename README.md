@@ -1,10 +1,23 @@
 # SMP Challenge 2026 — Video Task 6b: Popularity Prediction
 
-**Public LB MAPE: 0.17018** | **Team: wangyuchen**
+**Public LB MAPE: 0.17018** | **Team: NPU01**
 
 > **GitHub**: [https://github.com/WANGDADWER/smp2026-video-task6b](https://github.com/WANGDADWER/smp2026-video-task6b)
+> **Google Drive** (large files): [https://drive.google.com/drive/folders/18MPbAeYqO7qNZxh7Sf4_Bg6pGrOWt8rN](https://drive.google.com/drive/folders/18MPbAeYqO7qNZxh7Sf4_Bg6pGrOWt8rN)
 
 Two-stage pipeline: candidate_336 (residual stacking) → MLP centered residual refinement.
+
+---
+
+## Team Information
+
+| | |
+|---|---|
+| **Team Name** | NPU01 |
+| **Team Leader** | Yuchen Wang |
+| **Contact Email** | wyc294723847@gmail.com |
+| **Team Members** | Weikai Jing, Xovee Xu, Junqing Zhao, Xusheng Li, Hongru Ji |
+| **Organizations** | Northwestern Polytechnical University, University of Electronic Science and Technology of China |
 
 ---
 
@@ -13,12 +26,6 @@ Two-stage pipeline: candidate_336 (residual stacking) → MLP centered residual 
 ```bash
 git clone https://github.com/WANGDADWER/smp2026-video-task6b.git
 cd smp2026-video-task6b
-conda env create -f environment.yml
-conda activate smp_video
-bash run_all.sh
-```
-
-```bash
 conda env create -f environment.yml
 conda activate smp_video
 bash run_all.sh
@@ -155,14 +162,12 @@ final_package/
 
 | Resource | Size | Description | Download |
 |----------|------|-------------|----------|
-| `vit_base_frame8.csv` | 684 MB | ViT-base frame embeddings | [Google Drive]() |
-| `clip_vitl14_frame8_temporal.csv` | 988 MB | CLIP ViT-L/14 temporal embeddings | [Google Drive]() |
+| `vit_base_frame8.csv` | 684 MB | ViT-base frame embeddings | [Google Drive](https://drive.google.com/drive/folders/18MPbAeYqO7qNZxh7Sf4_Bg6pGrOWt8rN) |
+| `clip_vitl14_frame8_temporal.csv` | 988 MB | CLIP ViT-L/14 temporal embeddings | [Google Drive](https://drive.google.com/drive/folders/18MPbAeYqO7qNZxh7Sf4_Bg6pGrOWt8rN) |
 | Raw video files | ~20 GB | `train/` and `test/` mp4 files | SMP Challenge organizers |
 | Pretrained models | ~2 GB | BLIP, ViLT, Whisper-base | Auto-downloaded by scripts |
 
-> **Note**: Large feature files are **only needed for re-training Stage 1 from scratch** (feature extraction → base model → residuals). For exact reproduction (`bash run_all.sh`), only the included component CSVs are used — no additional downloads required.
-
-> **To upload large files to Google Drive**: Run `python upload_large_files_to_drive.py` on a machine with browser access, then paste the download links above.
+> **Note**: Large feature files are **only needed for re-training Stage 1 from scratch** (feature extraction → base model → residuals). For exact reproduction (`bash run_all.sh`), only the included component CSVs are used — no additional downloads required. Download all large files from the [Google Drive folder](https://drive.google.com/drive/folders/18MPbAeYqO7qNZxh7Sf4_Bg6pGrOWt8rN) and place them in `stage1/features/`.
 
 ---
 

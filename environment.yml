@@ -1,0 +1,30 @@
+name: smp_video
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - numpy>=1.26
+  - pandas>=2.1
+  - scikit-learn>=1.5
+  - scipy>=1.10
+  - pip:
+      # Shared
+      - torch>=2.5
+      - catboost>=1.2
+      - gensim>=4.3
+      # Stage 1
+      - transformers>=4.40
+      - timm>=1.0
+      - open_clip_torch>=3.3
+      - openai-whisper>=20250601
+      - rapidocr-onnxruntime>=1.2
+      - moviepy>=2.0
+      - opencv-python>=4.8
+      # Stage 2
+      - torchvision>=0.20
+      - torchaudio>=2.5
+      - xgboost>=3.0
+      - tqdm

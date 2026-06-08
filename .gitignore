@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Large feature files (download separately)
+stage1/features/vit_base_frame8.csv
+stage1/features/clip_vitl14_frame8_temporal.csv
+
+# Reproduced outputs (generated)
+stage1/reproduced/
+
+# Temporary
+*.tmp
+*.swp
+*~

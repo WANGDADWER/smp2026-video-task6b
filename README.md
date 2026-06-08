@@ -2,11 +2,21 @@
 
 **Public LB MAPE: 0.17018** | **Team: wangyuchen**
 
+> **GitHub**: [https://github.com/WANGDADWER/smp2026-video-task6b](https://github.com/WANGDADWER/smp2026-video-task6b)
+
 Two-stage pipeline: candidate_336 (residual stacking) → MLP centered residual refinement.
 
 ---
 
 ## Quick Start
+
+```bash
+git clone https://github.com/WANGDADWER/smp2026-video-task6b.git
+cd smp2026-video-task6b
+conda env create -f environment.yml
+conda activate smp_video
+bash run_all.sh
+```
 
 ```bash
 conda env create -f environment.yml
@@ -141,18 +151,18 @@ final_package/
 | Stage 1 component CSVs | 196 KB | `stage1/components/` |
 | candidate_336 submission | 64 KB | `stage1/submissions/` |
 
-### Download separately
+### Download separately (only needed for re-training Stage 1 from raw videos)
 
-| Resource | Size | Description | Path to place |
-|----------|------|-------------|---------------|
-| `vit_base_frame8.csv` | 684 MB | ViT-base frame embeddings | `stage1/features/` |
-| `clip_vitl14_frame8_temporal.csv` | 988 MB | CLIP ViT-L/14 temporal embeddings | `stage1/features/` |
-| Raw video files | ~20 GB | `train/` and `test/` mp4 files | `video_file/` (for Stage 1 training) |
-| Pretrained models | ~2 GB | BLIP, ViLT, Whisper-base | `fame_models/` (for Stage 1 training) |
+| Resource | Size | Description | Download |
+|----------|------|-------------|----------|
+| `vit_base_frame8.csv` | 684 MB | ViT-base frame embeddings | [Google Drive]() |
+| `clip_vitl14_frame8_temporal.csv` | 988 MB | CLIP ViT-L/14 temporal embeddings | [Google Drive]() |
+| Raw video files | ~20 GB | `train/` and `test/` mp4 files | SMP Challenge organizers |
+| Pretrained models | ~2 GB | BLIP, ViLT, Whisper-base | Auto-downloaded by scripts |
 
-> **Note**: The large feature files are only needed for **re-training Stage 1 from scratch** (feature extraction → base model → residuals). For reproduction (`run_all.sh` / stage1 `run_inference.sh`), only the included component CSVs are needed — no download required.
+> **Note**: Large feature files are **only needed for re-training Stage 1 from scratch** (feature extraction → base model → residuals). For exact reproduction (`bash run_all.sh`), only the included component CSVs are used — no additional downloads required.
 
-> **Storage Link**: [To be provided by the user]
+> **To upload large files to Google Drive**: Run `python upload_large_files_to_drive.py` on a machine with browser access, then paste the download links above.
 
 ---
 

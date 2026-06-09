@@ -1,6 +1,6 @@
 # SMP Challenge 2026 — Video Task 6b: Popularity Prediction
 
-**Public LB MAPE: 0.17018** | **Team: NPU01**
+**Public LB MAPE: 0.168 | Rank: 3** | **Team: NPU01/12313**
 
 > **GitHub**: [https://github.com/WANGDADWER/smp2026-video-task6b](https://github.com/WANGDADWER/smp2026-video-task6b)
 > **Google Drive** (large files): [https://drive.google.com/drive/folders/18MPbAeYqO7qNZxh7Sf4_Bg6pGrOWt8rN](https://drive.google.com/drive/folders/18MPbAeYqO7qNZxh7Sf4_Bg6pGrOWt8rN)
@@ -13,7 +13,7 @@ Two-stage pipeline: candidate_336 (residual stacking) → MLP centered residual 
 
 | | |
 |---|---|
-| **Team Name** | NPU01 |
+| **Team Name** | NPU01/12313 |
 | **Team Leader** | Yuchen Wang |
 | **Contact Email** | wyc294723847@gmail.com |
 | **Team Members** | Weikai Jing, Xovee Xu, Junqing Zhao, Xusheng Li, Hongru Ji |

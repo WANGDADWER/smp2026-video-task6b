@@ -1,4 +1,4 @@
-# SMP Challenge 2026 — Video Task 6b: Popularity Prediction
+# SMP Challenge 2026 — Video Popularity Prediction
 
 **Public LB MAPE: 0.168 | Rank: 3** | **Team: NPU01/12313**
 

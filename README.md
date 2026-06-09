@@ -90,18 +90,27 @@ The blend is **shrinkage estimation** — candidate_336 serves as a high-quality
 
 ## One-Click Scripts
 
+### Training (produces final submission from data)
+
 ```bash
-bash run_all.sh                         # Full pipeline: Stage 1 inference → Stage 2 training
+bash run_all.sh                          # Full 2-stage pipeline (recommended)
+cd stage2 && python run_train.py         # Stage 2 only: CV + training + blend
+cd stage2 && python run_train.py --predict-only  # Stage 2 only: skip CV, train + blend
+```
 
-# Stage 1 only
-cd stage1 && bash run_inference.sh       # Exact reproduction of candidate_336 (no GPU)
-cd stage1 && bash run_training.sh        # Full Stage 1 training (needs GPU + video files)
+### Inference (reproduces final submission exactly)
 
-# Stage 2 only
-cd stage2 && python run_train.py         # Full pipeline (CV + training + blend)
-cd stage2 && python run_train.py --predict-only  # Skip CV
-cd stage2 && python run_inference.py     # Training + inference
-cd stage2 && python run_inference.py --alpha 0.05  # Custom blend alpha
+```bash
+bash run_all.sh                          # Same script: all seeds fixed, output deterministic
+cd stage2 && python run_inference.py     # Stage 2 only: train + blend
+cd stage2 && python run_inference.py --alpha 0.05  # Custom α
+```
+
+### Stage 1 standalone
+
+```bash
+cd stage1 && bash run_inference.sh       # Exact reproduction of candidate_336 (no GPU needed)
+cd stage1 && bash run_training.sh        # Full Stage 1 training (needs GPU + video files + large features)
 ```
 
 ---

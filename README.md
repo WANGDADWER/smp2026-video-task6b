@@ -16,9 +16,6 @@ Two-stage pipeline: candidate_336 (residual stacking) → MLP centered residual 
 | **Team Name** | NPU01/12313 |
 | **Team Leader** | Yuchen Wang |
 | **Contact Email** | wyc294723847@gmail.com |
-| **Team Members** | Weikai Jing, Xovee Xu, Junqing Zhao, Xusheng Li, Hongru Ji |
-| **Organizations** | Northwestern Polytechnical University, University of Electronic Science and Technology of China |
-
 ---
 
 ## Quick Start
